@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: [delivered, shipped, canceled, invoiced, processing, created, approved, unavailable]
+  - name: fct_transactions
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: payment_value
+        tests: [not_null]
