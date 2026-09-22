@@ -4,7 +4,7 @@ with payments_agg as (
         sum(payment_value) as payment_value,
         max(installments) as installments,
         max(payment_type) as payment_type
-    from {{ ref('stg_payments') }}
+    from "olist"."public_staging"."stg_payments"
     group by order_id
 )
 select
@@ -12,5 +12,5 @@ select
   p.payment_type, p.installments,
   coalesce(p.payment_value, 0) as payment_value,
   o.ds
-from {{ ref('stg_orders') }} o
+from "olist"."public_staging"."stg_orders" o
 left join payments_agg p using (order_id)

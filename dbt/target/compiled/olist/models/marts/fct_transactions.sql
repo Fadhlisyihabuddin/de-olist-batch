@@ -4,4 +4,4 @@ select
   -- flag sederhana ala fraud/risk: cicilan jumbo / voucher besar
   ((coalesce(installments, 0) >= 10 or (payment_type = 'voucher' and payment_value > 500))) as is_risky,
   date_trunc('day', purchased_at)::date as txn_date
-from {{ ref('int_transactions') }}
+from "olist"."public_intermediate"."int_transactions"

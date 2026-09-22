@@ -37,9 +37,9 @@ services:
       - ./data:/opt/airflow/data
     command: >
       bash -c "pip install -q dbt-postgres boto3 pandas &&
-        airflow db init &&
-        airflow users create --username admin --password admin --firstname de --lastname eng --role Admin --email admin@local &&
-        airflow scheduler & airflow webserver"
+        airflow db migrate &&
+        (airflow users create --username admin --password admin --firstname de --lastname eng --role Admin --email admin@local || true) &&
+        (airflow scheduler & airflow webserver)"
     ports:
       - "8080:8080"
 

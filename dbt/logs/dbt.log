@@ -1,0 +1,2613 @@
+[0m13:37:21.484928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x744178c67510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74417634e350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7441762c3210>]}
+
+
+============================== 13:37:21.496161 | bd9305c9-5041-4490-8efe-0e770952d362 ==============================
+[0m13:37:21.496161 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:37:21.499398 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'log_format': 'default', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --profiles-dir .', 'write_json': 'True', 'debug': 'False', 'printer_width': '80', 'quiet': 'False', 'profiles_dir': '.', 'introspect': 'True', 'empty': 'False', 'maximum_seed_size_mib': '1', 'log_path': '/opt/airflow/dbt/logs', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'static_parser': 'True', 'target_path': 'None', 'fail_fast': 'False', 'warn_error': 'None', 'version_check': 'True'}
+[0m13:37:21.627508 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Credentials in profile "olist", target "dev" invalid: 'port' is a required property
+[0m13:37:21.631747 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.31553048, "process_in_blocks": "26459", "process_kernel_time": 0.387501, "process_mem_max_rss": "117128", "process_out_blocks": "1192", "process_user_time": 2.7964}
+[0m13:37:21.634714 [debug] [MainThread]: Command `dbt run` failed at 13:37:21.634507 after 0.32 seconds
+[0m13:37:21.637447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74417a787a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7441762c3d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x744176305610>]}
+[0m13:37:21.641000 [debug] [MainThread]: Flushing usage events
+[0m13:37:22.959407 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:39:57.132470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000444f29d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000443a01d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000443b1210>]}
+
+
+============================== 13:39:57.144461 | 97cc43ee-9493-473f-983d-d9e5c9fff21b ==============================
+[0m13:39:57.144461 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:39:57.147660 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'empty': 'False', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'debug': 'False', 'use_colors': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': '/opt/airflow/dbt/logs', 'no_print': 'None', 'log_format': 'default', 'version_check': 'True', 'hints_enabled': 'True', 'quiet': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'partial_parse': 'True', 'profiles_dir': '.', 'target_path': 'None'}
+[0m13:39:57.639732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000443c58d0>]}
+[0m13:39:57.725224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700046d65a10>]}
+[0m13:39:57.729567 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:39:57.836144 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:39:57.864169 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:39:57.871980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700043323210>]}
+[0m13:39:59.696976 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'stg_orders' in
+package 'olist' (models/marts/schema.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m13:39:59.702772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000423050d0>]}
+[0m13:39:59.864717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700042712510>]}
+[0m13:40:00.111566 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:40:00.136764 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:40:00.222569 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:40:00.265071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700041f18210>]}
+[0m13:40:00.268261 [info ] [MainThread]: Found 4 models, 6 data tests, 477 macros
+[0m13:40:00.271326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70000fc45350>]}
+[0m13:40:00.275968 [info ] [MainThread]: 
+[0m13:40:00.278989 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:40:00.282949 [info ] [MainThread]: 
+[0m13:40:00.285884 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:40:00.293754 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:40:00.295145 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:40:00.296527 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:40:00.352490 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:40:00.353115 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:40:00.353686 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:40:00.358536 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:40:00.370390 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:40:00.378722 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:40:00.387627 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:40:00.395702 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:40:00.402772 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:40:00.416404 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.029 seconds
+[0m13:40:00.420019 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.024 seconds
+[0m13:40:00.424716 [debug] [ThreadPool]: On list_olist: Close
+[0m13:40:00.425311 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.023 seconds
+[0m13:40:00.428291 [debug] [ThreadPool]: On list_olist: Close
+[0m13:40:00.434470 [debug] [ThreadPool]: On list_olist: Close
+[0m13:40:00.438970 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_public_marts)
+[0m13:40:00.439606 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_public_staging)
+[0m13:40:00.440256 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_public_intermediate)
+[0m13:40:00.442398 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "public_marts"
+"
+[0m13:40:00.444403 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "public_staging"
+"
+[0m13:40:00.446598 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "public_intermediate"
+"
+[0m13:40:00.456086 [debug] [ThreadPool]: Using postgres connection "create_olist_public_marts"
+[0m13:40:00.459443 [debug] [ThreadPool]: Using postgres connection "create_olist_public_staging"
+[0m13:40:00.463039 [debug] [ThreadPool]: Using postgres connection "create_olist_public_intermediate"
+[0m13:40:00.466574 [debug] [ThreadPool]: On create_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "create_olist_public_marts"} */
+create schema if not exists "public_marts"
+[0m13:40:00.468921 [debug] [ThreadPool]: On create_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "create_olist_public_staging"} */
+create schema if not exists "public_staging"
+[0m13:40:00.470880 [debug] [ThreadPool]: On create_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "create_olist_public_intermediate"} */
+create schema if not exists "public_intermediate"
+[0m13:40:00.472830 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.474629 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.476325 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.485906 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.013 seconds
+[0m13:40:00.487257 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.013 seconds
+[0m13:40:00.490317 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.014 seconds
+[0m13:40:00.491500 [debug] [ThreadPool]: On create_olist_public_marts: COMMIT
+[0m13:40:00.494150 [debug] [ThreadPool]: On create_olist_public_staging: COMMIT
+[0m13:40:00.499315 [debug] [ThreadPool]: On create_olist_public_intermediate: COMMIT
+[0m13:40:00.506666 [debug] [ThreadPool]: Using postgres connection "create_olist_public_marts"
+[0m13:40:00.512552 [debug] [ThreadPool]: Using postgres connection "create_olist_public_staging"
+[0m13:40:00.517762 [debug] [ThreadPool]: Using postgres connection "create_olist_public_intermediate"
+[0m13:40:00.523497 [debug] [ThreadPool]: On create_olist_public_marts: COMMIT
+[0m13:40:00.526145 [debug] [ThreadPool]: On create_olist_public_staging: COMMIT
+[0m13:40:00.528617 [debug] [ThreadPool]: On create_olist_public_intermediate: COMMIT
+[0m13:40:00.534584 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m13:40:00.536931 [debug] [ThreadPool]: On create_olist_public_marts: Close
+[0m13:40:00.545078 [debug] [ThreadPool]: SQL status: COMMIT in 0.012 seconds
+[0m13:40:00.547498 [debug] [ThreadPool]: On create_olist_public_staging: Close
+[0m13:40:00.555549 [debug] [ThreadPool]: SQL status: COMMIT in 0.020 seconds
+[0m13:40:00.558637 [debug] [ThreadPool]: On create_olist_public_intermediate: Close
+[0m13:40:00.564553 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_olist_public_intermediate, now list_olist_public_marts)
+[0m13:40:00.566032 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_olist_public_staging, now list_olist_public_staging)
+[0m13:40:00.567124 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_olist_public_marts, now list_olist_public_intermediate)
+[0m13:40:00.579547 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:40:00.582906 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:40:00.586974 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:40:00.590082 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:40:00.592650 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:40:00.595787 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:40:00.598280 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.600856 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.603700 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:40:00.635610 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.035 seconds
+[0m13:40:00.636661 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.033 seconds
+[0m13:40:00.637476 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.039 seconds
+[0m13:40:00.640252 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:40:00.643797 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:40:00.648146 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:40:00.650862 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:40:00.653505 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:40:00.655806 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:40:00.668269 [debug] [MainThread]: Using postgres connection "master"
+[0m13:40:00.671627 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:40:00.674184 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:40:00.692428 [debug] [MainThread]: SQL status: SELECT 0 in 0.018 seconds
+[0m13:40:00.695685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700046e41f10>]}
+[0m13:40:00.698056 [debug] [MainThread]: On master: ROLLBACK
+[0m13:40:00.700351 [debug] [MainThread]: On master: COMMIT
+[0m13:40:00.702454 [debug] [MainThread]: Using postgres connection "master"
+[0m13:40:00.704695 [debug] [MainThread]: On master: COMMIT
+[0m13:40:00.707262 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:40:00.709259 [debug] [MainThread]: On master: Close
+[0m13:40:00.719574 [debug] [Thread-1 (]: Began running node model.olist.stg_orders
+[0m13:40:00.720288 [debug] [Thread-2 (]: Began running node model.olist.stg_payments
+[0m13:40:00.722659 [info ] [Thread-1 (]: 1 of 4 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m13:40:00.724820 [info ] [Thread-2 (]: 2 of 4 START sql view model public_staging.stg_payments ........................ [RUN]
+[0m13:40:00.726727 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_marts, now model.olist.stg_orders)
+[0m13:40:00.729328 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_intermediate, now model.olist.stg_payments)
+[0m13:40:00.731296 [debug] [Thread-1 (]: Began compiling node model.olist.stg_orders
+[0m13:40:00.733201 [debug] [Thread-2 (]: Began compiling node model.olist.stg_payments
+[0m13:40:00.741020 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist.stg_orders"
+[0m13:40:00.743434 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist.stg_payments"
+[0m13:40:00.777952 [debug] [Thread-1 (]: Began executing node model.olist.stg_orders
+[0m13:40:00.787079 [debug] [Thread-2 (]: Began executing node model.olist.stg_payments
+[0m13:40:00.908079 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist.stg_payments"
+[0m13:40:00.911672 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist.stg_orders"
+[0m13:40:00.932486 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:40:00.936753 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+
+  create view "olist"."public_staging"."stg_payments__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  payment_type::text as payment_type,
+  payment_installments::int as installments,
+  payment_value::numeric as payment_value,
+  ds::date as ds
+from raw.raw_payments
+where order_id is not null
+  );
+[0m13:40:00.937727 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:40:00.939322 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:40:00.940978 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+
+  create view "olist"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  customer_id::text as customer_id,
+  order_status::text as order_status,
+  order_purchase_timestamp::timestamp as purchased_at,
+  ds::date as ds
+from raw.raw_orders
+where order_id is not null
+  );
+[0m13:40:00.944093 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:40:00.959560 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "raw.raw_orders" does not exist
+LINE 13: from raw.raw_orders
+              ^
+
+[0m13:40:00.960178 [debug] [Thread-2 (]: Postgres adapter: Postgres error: relation "raw.raw_payments" does not exist
+LINE 13: from raw.raw_payments
+              ^
+
+[0m13:40:00.961776 [debug] [Thread-1 (]: On model.olist.stg_orders: ROLLBACK
+[0m13:40:00.964011 [debug] [Thread-2 (]: On model.olist.stg_payments: ROLLBACK
+[0m13:40:00.966207 [debug] [Thread-1 (]: On model.olist.stg_orders: Close
+[0m13:40:00.967990 [debug] [Thread-2 (]: On model.olist.stg_payments: Close
+[0m13:40:00.979138 [debug] [Thread-2 (]: Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql
+[0m13:40:00.981167 [debug] [Thread-1 (]: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql
+[0m13:40:00.984802 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70000df211d0>]}
+[0m13:40:00.987163 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '97cc43ee-9493-473f-983d-d9e5c9fff21b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70000e0eb0d0>]}
+[0m13:40:00.989587 [error] [Thread-2 (]: 2 of 4 ERROR creating sql view model public_staging.stg_payments ............... [[31mERROR[0m in 0.25s]
+[0m13:40:00.991542 [error] [Thread-1 (]: 1 of 4 ERROR creating sql view model public_staging.stg_orders ................. [[31mERROR[0m in 0.26s]
+[0m13:40:00.994181 [debug] [Thread-2 (]: Finished running node model.olist.stg_payments
+[0m13:40:00.996253 [debug] [Thread-1 (]: Finished running node model.olist.stg_orders
+[0m13:40:00.998361 [debug] [Thread-7 (]: Marking all children of 'model.olist.stg_payments' to be skipped because of status 'error'.  Reason: Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql.
+[0m13:40:01.001679 [debug] [Thread-7 (]: Marking all children of 'model.olist.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql.
+[0m13:40:01.003709 [debug] [Thread-4 (]: Began running node model.olist.int_transactions
+[0m13:40:01.005650 [info ] [Thread-4 (]: 3 of 4 SKIP relation public_intermediate.int_transactions ...................... [[33mSKIP[0m]
+[0m13:40:01.007579 [debug] [Thread-4 (]: Finished running node model.olist.int_transactions
+[0m13:40:01.010141 [debug] [Thread-2 (]: Began running node model.olist.fct_transactions
+[0m13:40:01.011876 [info ] [Thread-2 (]: 4 of 4 SKIP relation public_marts.fct_transactions ............................. [[33mSKIP[0m]
+[0m13:40:01.013937 [debug] [Thread-2 (]: Finished running node model.olist.fct_transactions
+[0m13:40:01.017318 [debug] [MainThread]: On master: COMMIT
+[0m13:40:01.019003 [debug] [MainThread]: Using postgres connection "master"
+[0m13:40:01.020498 [debug] [MainThread]: On master: COMMIT
+[0m13:40:01.021954 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:40:01.029638 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m13:40:01.031471 [debug] [MainThread]: On master: Close
+[0m13:40:01.033186 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:40:01.034536 [debug] [MainThread]: Connection 'model.olist.stg_payments' was properly closed.
+[0m13:40:01.036070 [debug] [MainThread]: Connection 'list_olist_public_staging' was properly closed.
+[0m13:40:01.037744 [debug] [MainThread]: Connection 'model.olist.stg_orders' was properly closed.
+[0m13:40:01.039882 [info ] [MainThread]: 
+[0m13:40:01.041085 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.75 seconds (0.75s).
+[0m13:40:01.043138 [debug] [MainThread]: Command end result
+[0m13:40:01.259063 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:40:01.275455 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:40:01.290652 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:40:01.311929 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:40:01.314578 [info ] [MainThread]: 
+[0m13:40:01.317148 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:40:01.319462 [info ] [MainThread]: 
+[0m13:40:01.321634 [error] [MainThread]: [[31mERROR[0m]: in model stg_payments (models/staging/stg_payments.sql)
+[0m13:40:01.323699 [error] [MainThread]:   Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql
+[0m13:40:01.325733 [info ] [MainThread]: 
+[0m13:40:01.327645 [info ] [MainThread]:   compiled code at target/compiled/olist/models/staging/stg_payments.sql
+[0m13:40:01.330194 [info ] [MainThread]: 
+[0m13:40:01.332572 [error] [MainThread]: [[31mERROR[0m]: in model stg_orders (models/staging/stg_orders.sql)
+[0m13:40:01.334704 [error] [MainThread]:   Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql
+[0m13:40:01.336638 [info ] [MainThread]: 
+[0m13:40:01.338733 [info ] [MainThread]:   compiled code at target/compiled/olist/models/staging/stg_orders.sql
+[0m13:40:01.340530 [info ] [MainThread]: 
+[0m13:40:01.342611 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=2 NO-OP=0 REUSED=0 TOTAL=4
+[0m13:40:01.344771 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:40:01.347356 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.4221783, "process_in_blocks": "2408", "process_kernel_time": 0.445843, "process_mem_max_rss": "144252", "process_out_blocks": "0", "process_user_time": 5.028788}
+[0m13:40:01.349486 [debug] [MainThread]: Command `dbt run` failed at 13:40:01.349310 after 4.42 seconds
+[0m13:40:01.351370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000458b28d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7000488e0a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x700042bc5450>]}
+[0m13:40:01.353223 [debug] [MainThread]: Flushing usage events
+[0m13:40:09.619101 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:42:52.761808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9286a650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9286a510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9286a850>]}
+
+
+============================== 13:42:52.772365 | 740e85f0-c401-4559-ae93-3906dd6b85de ==============================
+[0m13:42:52.772365 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:42:52.774647 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error': 'None', 'write_json': 'True', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'static_parser': 'True', 'quiet': 'False', 'no_print': 'None', 'printer_width': '80', 'fail_fast': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_path': '/opt/airflow/dbt/logs', 'hints_enabled': 'True', 'debug': 'False', 'profiles_dir': '.', 'introspect': 'True'}
+[0m13:42:53.099640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9467e190>]}
+[0m13:42:53.182882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb92719890>]}
+[0m13:42:53.187641 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:42:53.281548 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:42:53.709247 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:42:53.712500 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:42:53.718232 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:42:53.731721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb90fc1410>]}
+[0m13:42:54.039118 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:42:54.052266 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:42:54.090614 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:42:54.135805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb913f4910>]}
+[0m13:42:54.139711 [info ] [MainThread]: Found 4 models, 6 data tests, 477 macros
+[0m13:42:54.142819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb92774f10>]}
+[0m13:42:54.147683 [info ] [MainThread]: 
+[0m13:42:54.150386 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:42:54.153098 [info ] [MainThread]: 
+[0m13:42:54.156275 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:42:54.163505 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:42:54.164614 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:42:54.165578 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:42:54.211317 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:42:54.211980 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:42:54.212613 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:42:54.214410 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:42:54.217429 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:42:54.220391 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:42:54.223389 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:42:54.225614 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:42:54.227809 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:42:54.238645 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m13:42:54.244110 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.018 seconds
+[0m13:42:54.256852 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.029 seconds
+[0m13:42:54.260120 [debug] [ThreadPool]: On list_olist: Close
+[0m13:42:54.265592 [debug] [ThreadPool]: On list_olist: Close
+[0m13:42:54.269520 [debug] [ThreadPool]: On list_olist: Close
+[0m13:42:54.284406 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_marts)
+[0m13:42:54.285384 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_staging)
+[0m13:42:54.286437 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_intermediate)
+[0m13:42:54.300089 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:42:54.317836 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:42:54.327388 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:42:54.333007 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:42:54.336137 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:42:54.339014 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:42:54.353528 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:42:54.356983 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:42:54.360322 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:42:54.379019 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.025 seconds
+[0m13:42:54.380089 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.023 seconds
+[0m13:42:54.384078 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:42:54.385310 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.025 seconds
+[0m13:42:54.388223 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:42:54.390838 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:42:54.394471 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:42:54.397778 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:42:54.404470 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:42:54.414170 [debug] [MainThread]: Using postgres connection "master"
+[0m13:42:54.417534 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:42:54.420425 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:42:54.433020 [debug] [MainThread]: SQL status: SELECT 0 in 0.013 seconds
+[0m13:42:54.438109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9270aa10>]}
+[0m13:42:54.440947 [debug] [MainThread]: On master: ROLLBACK
+[0m13:42:54.443484 [debug] [MainThread]: On master: COMMIT
+[0m13:42:54.446075 [debug] [MainThread]: Using postgres connection "master"
+[0m13:42:54.448234 [debug] [MainThread]: On master: COMMIT
+[0m13:42:54.450383 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:42:54.452573 [debug] [MainThread]: On master: Close
+[0m13:42:54.460901 [debug] [Thread-1 (]: Began running node model.olist.stg_orders
+[0m13:42:54.461535 [debug] [Thread-2 (]: Began running node model.olist.stg_payments
+[0m13:42:54.464303 [info ] [Thread-1 (]: 1 of 4 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m13:42:54.466472 [info ] [Thread-2 (]: 2 of 4 START sql view model public_staging.stg_payments ........................ [RUN]
+[0m13:42:54.468933 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_intermediate, now model.olist.stg_orders)
+[0m13:42:54.471711 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_staging, now model.olist.stg_payments)
+[0m13:42:54.474010 [debug] [Thread-1 (]: Began compiling node model.olist.stg_orders
+[0m13:42:54.476159 [debug] [Thread-2 (]: Began compiling node model.olist.stg_payments
+[0m13:42:54.484583 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist.stg_orders"
+[0m13:42:54.487174 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist.stg_payments"
+[0m13:42:54.501008 [debug] [Thread-1 (]: Began executing node model.olist.stg_orders
+[0m13:42:54.502632 [debug] [Thread-2 (]: Began executing node model.olist.stg_payments
+[0m13:42:54.556334 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist.stg_orders"
+[0m13:42:54.557900 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist.stg_payments"
+[0m13:42:54.579075 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:42:54.582299 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:42:54.583052 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+
+  create view "olist"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  customer_id::text as customer_id,
+  order_status::text as order_status,
+  order_purchase_timestamp::timestamp as purchased_at,
+  ds::date as ds
+from raw.raw_orders
+where order_id is not null
+  );
+[0m13:42:54.588107 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+
+  create view "olist"."public_staging"."stg_payments__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  payment_type::text as payment_type,
+  payment_installments::int as installments,
+  payment_value::numeric as payment_value,
+  ds::date as ds
+from raw.raw_payments
+where order_id is not null
+  );
+[0m13:42:54.591131 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:42:54.594097 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:42:54.604665 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "raw.raw_orders" does not exist
+LINE 13: from raw.raw_orders
+              ^
+
+[0m13:42:54.607535 [debug] [Thread-1 (]: On model.olist.stg_orders: ROLLBACK
+[0m13:42:54.608187 [debug] [Thread-2 (]: Postgres adapter: Postgres error: relation "raw.raw_payments" does not exist
+LINE 13: from raw.raw_payments
+              ^
+
+[0m13:42:54.610563 [debug] [Thread-1 (]: On model.olist.stg_orders: Close
+[0m13:42:54.612587 [debug] [Thread-2 (]: On model.olist.stg_payments: ROLLBACK
+[0m13:42:54.627503 [debug] [Thread-1 (]: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql
+[0m13:42:54.632439 [debug] [Thread-2 (]: On model.olist.stg_payments: Close
+[0m13:42:54.644259 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb8e8028d0>]}
+[0m13:42:54.657203 [debug] [Thread-2 (]: Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql
+[0m13:42:54.660578 [error] [Thread-1 (]: 1 of 4 ERROR creating sql view model public_staging.stg_orders ................. [[31mERROR[0m in 0.17s]
+[0m13:42:54.664810 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '740e85f0-c401-4559-ae93-3906dd6b85de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb8e978f10>]}
+[0m13:42:54.675373 [debug] [Thread-1 (]: Finished running node model.olist.stg_orders
+[0m13:42:54.685033 [error] [Thread-2 (]: 2 of 4 ERROR creating sql view model public_staging.stg_payments ............... [[31mERROR[0m in 0.19s]
+[0m13:42:54.692193 [debug] [Thread-7 (]: Marking all children of 'model.olist.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql.
+[0m13:42:54.705260 [debug] [Thread-2 (]: Finished running node model.olist.stg_payments
+[0m13:42:54.724245 [debug] [Thread-7 (]: Marking all children of 'model.olist.stg_payments' to be skipped because of status 'error'.  Reason: Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql.
+[0m13:42:54.735168 [debug] [Thread-4 (]: Began running node model.olist.int_transactions
+[0m13:42:54.744430 [info ] [Thread-4 (]: 3 of 4 SKIP relation public_intermediate.int_transactions ...................... [[33mSKIP[0m]
+[0m13:42:54.751888 [debug] [Thread-4 (]: Finished running node model.olist.int_transactions
+[0m13:42:54.762690 [debug] [Thread-1 (]: Began running node model.olist.fct_transactions
+[0m13:42:54.774732 [info ] [Thread-1 (]: 4 of 4 SKIP relation public_marts.fct_transactions ............................. [[33mSKIP[0m]
+[0m13:42:54.781615 [debug] [Thread-1 (]: Finished running node model.olist.fct_transactions
+[0m13:42:54.788591 [debug] [MainThread]: On master: COMMIT
+[0m13:42:54.792134 [debug] [MainThread]: Using postgres connection "master"
+[0m13:42:54.794923 [debug] [MainThread]: On master: COMMIT
+[0m13:42:54.797933 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:42:54.809233 [debug] [MainThread]: SQL status: COMMIT in 0.011 seconds
+[0m13:42:54.813018 [debug] [MainThread]: On master: Close
+[0m13:42:54.816156 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:42:54.818934 [debug] [MainThread]: Connection 'model.olist.stg_orders' was properly closed.
+[0m13:42:54.821447 [debug] [MainThread]: Connection 'model.olist.stg_payments' was properly closed.
+[0m13:42:54.823422 [debug] [MainThread]: Connection 'list_olist_public_marts' was properly closed.
+[0m13:42:54.825622 [info ] [MainThread]: 
+[0m13:42:54.831067 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.67 seconds (0.67s).
+[0m13:42:54.834262 [debug] [MainThread]: Command end result
+[0m13:42:54.968966 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:42:54.988898 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:42:55.004566 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:42:55.029868 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:42:55.033477 [info ] [MainThread]: 
+[0m13:42:55.037148 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:42:55.042271 [info ] [MainThread]: 
+[0m13:42:55.046339 [error] [MainThread]: [[31mERROR[0m]: in model stg_orders (models/staging/stg_orders.sql)
+[0m13:42:55.049648 [error] [MainThread]:   Database Error in model stg_orders (models/staging/stg_orders.sql)
+  relation "raw.raw_orders" does not exist
+  LINE 13: from raw.raw_orders
+                ^
+  compiled code at target/run/olist/models/staging/stg_orders.sql
+[0m13:42:55.052520 [info ] [MainThread]: 
+[0m13:42:55.056889 [info ] [MainThread]:   compiled code at target/compiled/olist/models/staging/stg_orders.sql
+[0m13:42:55.059935 [info ] [MainThread]: 
+[0m13:42:55.062665 [error] [MainThread]: [[31mERROR[0m]: in model stg_payments (models/staging/stg_payments.sql)
+[0m13:42:55.065563 [error] [MainThread]:   Database Error in model stg_payments (models/staging/stg_payments.sql)
+  relation "raw.raw_payments" does not exist
+  LINE 13: from raw.raw_payments
+                ^
+  compiled code at target/run/olist/models/staging/stg_payments.sql
+[0m13:42:55.068358 [info ] [MainThread]: 
+[0m13:42:55.071902 [info ] [MainThread]:   compiled code at target/compiled/olist/models/staging/stg_payments.sql
+[0m13:42:55.074421 [info ] [MainThread]: 
+[0m13:42:55.077194 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=2 NO-OP=0 REUSED=0 TOTAL=4
+[0m13:42:55.080838 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.4604454, "process_in_blocks": "1036", "process_kernel_time": 0.334744, "process_mem_max_rss": "136316", "process_out_blocks": "0", "process_user_time": 3.528929}
+[0m13:42:55.082760 [debug] [MainThread]: Command `dbt run` failed at 13:42:55.082592 after 2.46 seconds
+[0m13:42:55.088036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb96c0bc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb9296e450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cb90f39050>]}
+[0m13:42:55.090260 [debug] [MainThread]: Flushing usage events
+[0m13:42:56.755269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:06.627045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77469548fed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77469532b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77469532ba50>]}
+
+
+============================== 13:46:06.636972 | 3fa2ac6b-d584-4df7-9116-19be234bce6a ==============================
+[0m13:46:06.636972 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:46:06.639661 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'printer_width': '80', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/dbt/logs', 'write_json': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'hints_enabled': 'True', 'log_format': 'default', 'version_check': 'True', 'empty': 'False', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'warn_error': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'use_colors': 'True', 'profiles_dir': '.'}
+[0m13:46:06.985606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774696983ad0>]}
+[0m13:46:07.068873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774697d52290>]}
+[0m13:46:07.080258 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:46:07.169924 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:46:07.634763 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:46:07.638096 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:46:07.640801 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:46:07.654073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774693bebed0>]}
+[0m13:46:07.955995 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:46:07.976072 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:46:08.011180 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:46:08.071516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774693fea6d0>]}
+[0m13:46:08.075416 [info ] [MainThread]: Found 4 models, 6 data tests, 477 macros
+[0m13:46:08.078929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774693f86c10>]}
+[0m13:46:08.084273 [info ] [MainThread]: 
+[0m13:46:08.087346 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:46:08.090789 [info ] [MainThread]: 
+[0m13:46:08.093767 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:46:08.101541 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:46:08.102907 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:46:08.104118 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:46:08.157478 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:46:08.158138 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:46:08.158725 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:46:08.162153 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:46:08.166272 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:46:08.169157 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:46:08.172130 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:08.174706 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:08.177520 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:08.191325 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.019 seconds
+[0m13:46:08.193328 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.019 seconds
+[0m13:46:08.195600 [debug] [ThreadPool]: On list_olist: Close
+[0m13:46:08.196393 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.019 seconds
+[0m13:46:08.202000 [debug] [ThreadPool]: On list_olist: Close
+[0m13:46:08.208262 [debug] [ThreadPool]: On list_olist: Close
+[0m13:46:08.217924 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_intermediate)
+[0m13:46:08.219014 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_marts)
+[0m13:46:08.220342 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_staging)
+[0m13:46:08.228598 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:46:08.232878 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:46:08.237309 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:46:08.240548 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:46:08.246348 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:46:08.251557 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:46:08.254337 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:46:08.256214 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:46:08.258363 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:46:08.272093 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.018 seconds
+[0m13:46:08.273410 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.017 seconds
+[0m13:46:08.274415 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.016 seconds
+[0m13:46:08.277819 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:46:08.281264 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:46:08.284698 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:46:08.287856 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:46:08.290215 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:46:08.292289 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:46:08.301813 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:08.304966 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:46:08.306959 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:46:08.318931 [debug] [MainThread]: SQL status: SELECT 0 in 0.012 seconds
+[0m13:46:08.321947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77469432ef90>]}
+[0m13:46:08.324547 [debug] [MainThread]: On master: ROLLBACK
+[0m13:46:08.327258 [debug] [MainThread]: On master: COMMIT
+[0m13:46:08.329456 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:08.331170 [debug] [MainThread]: On master: COMMIT
+[0m13:46:08.334734 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:46:08.336643 [debug] [MainThread]: On master: Close
+[0m13:46:08.344433 [debug] [Thread-1 (]: Began running node model.olist.stg_orders
+[0m13:46:08.345029 [debug] [Thread-2 (]: Began running node model.olist.stg_payments
+[0m13:46:08.347425 [info ] [Thread-1 (]: 1 of 4 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m13:46:08.349992 [info ] [Thread-2 (]: 2 of 4 START sql view model public_staging.stg_payments ........................ [RUN]
+[0m13:46:08.352693 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_staging, now model.olist.stg_orders)
+[0m13:46:08.354907 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_marts, now model.olist.stg_payments)
+[0m13:46:08.357204 [debug] [Thread-1 (]: Began compiling node model.olist.stg_orders
+[0m13:46:08.358931 [debug] [Thread-2 (]: Began compiling node model.olist.stg_payments
+[0m13:46:08.365953 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist.stg_orders"
+[0m13:46:08.368676 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist.stg_payments"
+[0m13:46:08.381391 [debug] [Thread-2 (]: Began executing node model.olist.stg_payments
+[0m13:46:08.383010 [debug] [Thread-1 (]: Began executing node model.olist.stg_orders
+[0m13:46:08.437006 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist.stg_payments"
+[0m13:46:08.437991 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist.stg_orders"
+[0m13:46:08.457730 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:46:08.460549 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+
+  create view "olist"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  customer_id::text as customer_id,
+  order_status::text as order_status,
+  order_purchase_timestamp::timestamp as purchased_at,
+  ds::date as ds
+from raw.raw_orders
+where order_id is not null
+  );
+[0m13:46:08.461280 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:46:08.463746 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:46:08.466756 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+
+  create view "olist"."public_staging"."stg_payments__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  payment_type::text as payment_type,
+  payment_installments::int as installments,
+  payment_value::numeric as payment_value,
+  ds::date as ds
+from raw.raw_payments
+where order_id is not null
+  );
+[0m13:46:08.472062 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:46:08.485009 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.021 seconds
+[0m13:46:08.485738 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.014 seconds
+[0m13:46:08.493530 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:46:08.498046 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:46:08.500410 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+alter table "olist"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m13:46:08.503413 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+alter table "olist"."public_staging"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m13:46:08.513472 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m13:46:08.514100 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.009 seconds
+[0m13:46:08.534654 [debug] [Thread-2 (]: On model.olist.stg_payments: COMMIT
+[0m13:46:08.536877 [debug] [Thread-1 (]: On model.olist.stg_orders: COMMIT
+[0m13:46:08.540343 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:46:08.542907 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:46:08.545503 [debug] [Thread-2 (]: On model.olist.stg_payments: COMMIT
+[0m13:46:08.547580 [debug] [Thread-1 (]: On model.olist.stg_orders: COMMIT
+[0m13:46:08.559481 [debug] [Thread-2 (]: SQL status: COMMIT in 0.009 seconds
+[0m13:46:08.569831 [debug] [Thread-1 (]: SQL status: COMMIT in 0.018 seconds
+[0m13:46:08.570639 [debug] [Thread-2 (]: Applying DROP to: "olist"."public_staging"."stg_payments__dbt_backup"
+[0m13:46:08.574676 [debug] [Thread-1 (]: Applying DROP to: "olist"."public_staging"."stg_orders__dbt_backup"
+[0m13:46:08.584922 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:46:08.588261 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:46:08.591858 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+drop view if exists "olist"."public_staging"."stg_payments__dbt_backup" cascade
+[0m13:46:08.595344 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+drop view if exists "olist"."public_staging"."stg_orders__dbt_backup" cascade
+[0m13:46:08.612798 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.013 seconds
+[0m13:46:08.613494 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.016 seconds
+[0m13:46:08.618000 [debug] [Thread-1 (]: On model.olist.stg_orders: Close
+[0m13:46:08.621865 [debug] [Thread-2 (]: On model.olist.stg_payments: Close
+[0m13:46:08.625954 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774693b20050>]}
+[0m13:46:08.628315 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77469159cd90>]}
+[0m13:46:08.630693 [info ] [Thread-1 (]: 1 of 4 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.27s]
+[0m13:46:08.633293 [info ] [Thread-2 (]: 2 of 4 OK created sql view model public_staging.stg_payments ................... [[32mCREATE VIEW[0m in 0.27s]
+[0m13:46:08.635465 [debug] [Thread-1 (]: Finished running node model.olist.stg_orders
+[0m13:46:08.638335 [debug] [Thread-2 (]: Finished running node model.olist.stg_payments
+[0m13:46:08.643030 [debug] [Thread-4 (]: Began running node model.olist.int_transactions
+[0m13:46:08.645610 [info ] [Thread-4 (]: 3 of 4 START sql view model public_intermediate.int_transactions ............... [RUN]
+[0m13:46:08.648000 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.olist.int_transactions'
+[0m13:46:08.649648 [debug] [Thread-4 (]: Began compiling node model.olist.int_transactions
+[0m13:46:08.653588 [debug] [Thread-4 (]: Writing injected SQL for node "model.olist.int_transactions"
+[0m13:46:08.714652 [debug] [Thread-4 (]: Began executing node model.olist.int_transactions
+[0m13:46:08.721661 [debug] [Thread-4 (]: Writing runtime sql for node "model.olist.int_transactions"
+[0m13:46:08.747132 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:46:08.749772 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+
+  create view "olist"."public_intermediate"."int_transactions__dbt_tmp"
+    
+    
+  as (
+    select
+  o.order_id, o.customer_id, o.order_status, o.purchased_at,
+  p.payment_type, p.installments, p.payment_value,
+  o.ds
+from "olist"."public_staging"."stg_orders" o
+left join "olist"."public_staging"."stg_payments" p using (order_id)
+  );
+[0m13:46:08.752063 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:46:08.763660 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m13:46:08.769927 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:46:08.772675 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+alter table "olist"."public_intermediate"."int_transactions__dbt_tmp" rename to "int_transactions"
+[0m13:46:08.775867 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:46:08.779794 [debug] [Thread-4 (]: On model.olist.int_transactions: COMMIT
+[0m13:46:08.782281 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:46:08.784219 [debug] [Thread-4 (]: On model.olist.int_transactions: COMMIT
+[0m13:46:08.797005 [debug] [Thread-4 (]: SQL status: COMMIT in 0.011 seconds
+[0m13:46:08.801352 [debug] [Thread-4 (]: Applying DROP to: "olist"."public_intermediate"."int_transactions__dbt_backup"
+[0m13:46:08.806294 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:46:08.813255 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+drop view if exists "olist"."public_intermediate"."int_transactions__dbt_backup" cascade
+[0m13:46:08.821359 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:46:08.829032 [debug] [Thread-4 (]: On model.olist.int_transactions: Close
+[0m13:46:08.838980 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7746915f9110>]}
+[0m13:46:08.842605 [info ] [Thread-4 (]: 3 of 4 OK created sql view model public_intermediate.int_transactions .......... [[32mCREATE VIEW[0m in 0.19s]
+[0m13:46:08.845311 [debug] [Thread-4 (]: Finished running node model.olist.int_transactions
+[0m13:46:08.848125 [debug] [Thread-1 (]: Began running node model.olist.fct_transactions
+[0m13:46:08.850155 [info ] [Thread-1 (]: 4 of 4 START sql table model public_marts.fct_transactions ..................... [RUN]
+[0m13:46:08.852414 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist.stg_orders, now model.olist.fct_transactions)
+[0m13:46:08.855765 [debug] [Thread-1 (]: Began compiling node model.olist.fct_transactions
+[0m13:46:08.859775 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist.fct_transactions"
+[0m13:46:08.889996 [debug] [Thread-1 (]: Began executing node model.olist.fct_transactions
+[0m13:46:08.917823 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist.fct_transactions"
+[0m13:46:08.972139 [debug] [Thread-1 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:46:08.974286 [debug] [Thread-1 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+
+  
+    
+
+  create  table "olist"."public_marts"."fct_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+  order_id, customer_id, order_status, payment_type,
+  payment_value,
+  -- flag sederhana ala fraud/risk: cicilan jumbo / voucher besar
+  (installments >= 10 or (payment_type = 'voucher' and payment_value > 500)) as is_risky,
+  date_trunc('day', purchased_at)::date as txn_date
+from "olist"."public_intermediate"."int_transactions"
+  );
+  
+[0m13:46:08.977358 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:46:11.258245 [debug] [Thread-1 (]: SQL status: SELECT 103887 in 2.281 seconds
+[0m13:46:11.268035 [debug] [Thread-1 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:46:11.270787 [debug] [Thread-1 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+alter table "olist"."public_marts"."fct_transactions__dbt_tmp" rename to "fct_transactions"
+[0m13:46:11.272894 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:46:11.275770 [debug] [Thread-1 (]: On model.olist.fct_transactions: COMMIT
+[0m13:46:11.277719 [debug] [Thread-1 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:46:11.279391 [debug] [Thread-1 (]: On model.olist.fct_transactions: COMMIT
+[0m13:46:11.287638 [debug] [Thread-1 (]: SQL status: COMMIT in 0.007 seconds
+[0m13:46:11.291234 [debug] [Thread-1 (]: Applying DROP to: "olist"."public_marts"."fct_transactions__dbt_backup"
+[0m13:46:11.296494 [debug] [Thread-1 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:46:11.298401 [debug] [Thread-1 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+drop table if exists "olist"."public_marts"."fct_transactions__dbt_backup" cascade
+[0m13:46:11.300435 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:46:11.303215 [debug] [Thread-1 (]: On model.olist.fct_transactions: Close
+[0m13:46:11.305251 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa2ac6b-d584-4df7-9116-19be234bce6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774691571190>]}
+[0m13:46:11.309316 [info ] [Thread-1 (]: 4 of 4 OK created sql table model public_marts.fct_transactions ................ [[32mSELECT 103887[0m in 2.45s]
+[0m13:46:11.311914 [debug] [Thread-1 (]: Finished running node model.olist.fct_transactions
+[0m13:46:11.315696 [debug] [MainThread]: On master: COMMIT
+[0m13:46:11.317539 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:11.319437 [debug] [MainThread]: On master: COMMIT
+[0m13:46:11.321158 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:46:11.333823 [debug] [MainThread]: SQL status: COMMIT in 0.013 seconds
+[0m13:46:11.336351 [debug] [MainThread]: On master: Close
+[0m13:46:11.343546 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:46:11.352346 [debug] [MainThread]: Connection 'model.olist.fct_transactions' was properly closed.
+[0m13:46:11.356172 [debug] [MainThread]: Connection 'model.olist.stg_payments' was properly closed.
+[0m13:46:11.358068 [debug] [MainThread]: Connection 'list_olist_public_intermediate' was properly closed.
+[0m13:46:11.360112 [debug] [MainThread]: Connection 'model.olist.int_transactions' was properly closed.
+[0m13:46:11.362261 [info ] [MainThread]: 
+[0m13:46:11.364172 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 3.27 seconds (3.27s).
+[0m13:46:11.367464 [debug] [MainThread]: Command end result
+[0m13:46:11.484746 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:46:11.497351 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:46:11.509533 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:46:11.530096 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:46:11.531969 [info ] [MainThread]: 
+[0m13:46:11.534384 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:46:11.537756 [info ] [MainThread]: 
+[0m13:46:11.540423 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m13:46:11.543465 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.0597982, "process_in_blocks": "2740", "process_kernel_time": 0.4022, "process_mem_max_rss": "136600", "process_out_blocks": "0", "process_user_time": 3.587632}
+[0m13:46:11.545843 [debug] [MainThread]: Command `dbt run` succeeded at 13:46:11.545674 after 5.06 seconds
+[0m13:46:11.547798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774695494810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774699853bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7746955e8a50>]}
+[0m13:46:11.549676 [debug] [MainThread]: Flushing usage events
+[0m13:46:12.722409 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:16.655035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d157c8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d143e8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d157c6d0>]}
+
+
+============================== 13:46:16.664470 | 32cfab3d-583c-412d-9b6b-53b7730b14e4 ==============================
+[0m13:46:16.664470 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:46:16.667336 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'no_print': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'log_path': '/opt/airflow/dbt/logs', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'profiles_dir': '.', 'quiet': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'write_json': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m13:46:17.149866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d1681090>]}
+[0m13:46:17.231063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d3df2410>]}
+[0m13:46:17.235749 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:46:17.324825 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:46:17.768241 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:46:17.771093 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:46:17.773412 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:46:17.786115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d0ef0c50>]}
+[0m13:46:18.002481 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:46:18.017469 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:46:18.041661 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:46:18.089827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272cffe6dd0>]}
+[0m13:46:18.091954 [info ] [MainThread]: Found 4 models, 6 data tests, 477 macros
+[0m13:46:18.093960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d0393790>]}
+[0m13:46:18.100938 [info ] [MainThread]: 
+[0m13:46:18.106551 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:46:18.110734 [info ] [MainThread]: 
+[0m13:46:18.121241 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:46:18.130120 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_intermediate'
+[0m13:46:18.131045 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_marts'
+[0m13:46:18.131992 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_staging'
+[0m13:46:18.183206 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:46:18.183896 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:46:18.184424 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:46:18.188122 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:46:18.190288 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:46:18.192522 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:46:18.194408 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:18.196241 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:18.198089 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:46:18.211349 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.017 seconds
+[0m13:46:18.212469 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.016 seconds
+[0m13:46:18.215647 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:46:18.216499 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.018 seconds
+[0m13:46:18.221427 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:46:18.224958 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:46:18.228199 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:46:18.231625 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:46:18.242264 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:46:18.259714 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:18.263008 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:46:18.265749 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:46:18.278588 [debug] [MainThread]: SQL status: SELECT 4 in 0.013 seconds
+[0m13:46:18.283649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32cfab3d-583c-412d-9b6b-53b7730b14e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272cf35ef90>]}
+[0m13:46:18.286261 [debug] [MainThread]: On master: ROLLBACK
+[0m13:46:18.288561 [debug] [MainThread]: On master: COMMIT
+[0m13:46:18.290708 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:18.293325 [debug] [MainThread]: On master: COMMIT
+[0m13:46:18.295875 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:46:18.298273 [debug] [MainThread]: On master: Close
+[0m13:46:18.305980 [debug] [Thread-1 (]: Began running node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:46:18.306723 [debug] [Thread-2 (]: Began running node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:46:18.307400 [debug] [Thread-3 (]: Began running node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:46:18.308131 [debug] [Thread-4 (]: Began running node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:46:18.309851 [info ] [Thread-1 (]: 1 of 6 START test accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable  [RUN]
+[0m13:46:18.312034 [info ] [Thread-2 (]: 2 of 6 START test not_null_fct_transactions_order_id ........................... [RUN]
+[0m13:46:18.314537 [info ] [Thread-3 (]: 3 of 6 START test not_null_fct_transactions_payment_value ...................... [RUN]
+[0m13:46:18.316584 [info ] [Thread-4 (]: 4 of 6 START test not_null_stg_orders_order_id ................................. [RUN]
+[0m13:46:18.318968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_staging, now test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63)
+[0m13:46:18.321447 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_marts, now test.olist.not_null_fct_transactions_order_id.7525e16923)
+[0m13:46:18.323657 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_olist_public_intermediate, now test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a)
+[0m13:46:18.326045 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.olist.not_null_stg_orders_order_id.81cfe2fe64'
+[0m13:46:18.328083 [debug] [Thread-1 (]: Began compiling node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:46:18.330405 [debug] [Thread-2 (]: Began compiling node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:46:18.332732 [debug] [Thread-3 (]: Began compiling node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:46:18.334786 [debug] [Thread-4 (]: Began compiling node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:46:18.383116 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:46:18.398245 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:46:18.418193 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:46:18.426500 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:46:18.446551 [debug] [Thread-1 (]: Began executing node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:46:18.458929 [debug] [Thread-2 (]: Began executing node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:46:18.471078 [debug] [Thread-4 (]: Began executing node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:46:18.478428 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:46:18.483185 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:46:18.488287 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:46:18.488856 [debug] [Thread-3 (]: Began executing node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:46:18.499548 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:46:18.507277 [debug] [Thread-2 (]: Using postgres connection "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:46:18.510905 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_fct_transactions_order_id.7525e16923"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "olist"."public_marts"."fct_transactions"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.512095 [debug] [Thread-4 (]: Using postgres connection "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:46:18.516045 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:46:18.516851 [debug] [Thread-1 (]: Using postgres connection "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:46:18.519451 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_stg_orders_order_id.81cfe2fe64"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "olist"."public_staging"."stg_orders"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.520423 [debug] [Thread-3 (]: Using postgres connection "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:46:18.525025 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from "olist"."public_staging"."stg_orders"
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','shipped','canceled','invoiced','processing','created','approved','unavailable'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.527430 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:46:18.530024 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select payment_value
+from "olist"."public_marts"."fct_transactions"
+where payment_value is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.532662 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:46:18.537144 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m13:46:18.537803 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:46:18.549700 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: ROLLBACK
+[0m13:46:18.550394 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.023 seconds
+[0m13:46:18.555295 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: Close
+[0m13:46:18.559083 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: ROLLBACK
+[0m13:46:18.561497 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.029 seconds
+[0m13:46:18.562578 [info ] [Thread-2 (]: 2 of 6 PASS not_null_fct_transactions_order_id ................................. [[32mPASS[0m in 0.24s]
+[0m13:46:18.564970 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: Close
+[0m13:46:18.568121 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: ROLLBACK
+[0m13:46:18.569336 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.032 seconds
+[0m13:46:18.571511 [debug] [Thread-2 (]: Finished running node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:46:18.574148 [info ] [Thread-4 (]: 4 of 6 PASS not_null_stg_orders_order_id ....................................... [[32mPASS[0m in 0.25s]
+[0m13:46:18.576448 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: Close
+[0m13:46:18.579601 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: ROLLBACK
+[0m13:46:18.582363 [debug] [Thread-2 (]: Began running node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:46:18.585510 [debug] [Thread-4 (]: Finished running node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:46:18.594746 [info ] [Thread-1 (]: 1 of 6 PASS accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable  [[32mPASS[0m in 0.28s]
+[0m13:46:18.597202 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: Close
+[0m13:46:18.599569 [info ] [Thread-2 (]: 5 of 6 START test unique_fct_transactions_order_id ............................. [RUN]
+[0m13:46:18.602626 [debug] [Thread-4 (]: Began running node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:46:18.605709 [debug] [Thread-1 (]: Finished running node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:46:18.608579 [error] [Thread-3 (]: 3 of 6 FAIL 1 not_null_fct_transactions_payment_value .......................... [[31mFAIL 1[0m in 0.28s]
+[0m13:46:18.610748 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.olist.not_null_fct_transactions_order_id.7525e16923, now test.olist.unique_fct_transactions_order_id.916848cae3)
+[0m13:46:18.613742 [info ] [Thread-4 (]: 6 of 6 START test unique_stg_orders_order_id ................................... [RUN]
+[0m13:46:18.618511 [debug] [Thread-3 (]: Finished running node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:46:18.620774 [debug] [Thread-2 (]: Began compiling node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:46:18.622991 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.olist.not_null_stg_orders_order_id.81cfe2fe64, now test.olist.unique_stg_orders_order_id.e3b841c71a)
+[0m13:46:18.637896 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:46:18.640175 [debug] [Thread-4 (]: Began compiling node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:46:18.652083 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:46:18.663675 [debug] [Thread-2 (]: Began executing node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:46:18.669390 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:46:18.670042 [debug] [Thread-4 (]: Began executing node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:46:18.675887 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:46:18.686906 [debug] [Thread-2 (]: Using postgres connection "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:46:18.690849 [debug] [Thread-2 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.unique_fct_transactions_order_id.916848cae3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "olist"."public_marts"."fct_transactions"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.691504 [debug] [Thread-4 (]: Using postgres connection "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:46:18.694041 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:46:18.696941 [debug] [Thread-4 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.unique_stg_orders_order_id.e3b841c71a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "olist"."public_staging"."stg_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:46:18.701349 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:46:18.781761 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.088 seconds
+[0m13:46:18.782556 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.081 seconds
+[0m13:46:18.786687 [debug] [Thread-2 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: ROLLBACK
+[0m13:46:18.790315 [debug] [Thread-4 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: ROLLBACK
+[0m13:46:18.792766 [debug] [Thread-2 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: Close
+[0m13:46:18.794582 [debug] [Thread-4 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: Close
+[0m13:46:18.796778 [error] [Thread-2 (]: 5 of 6 FAIL 2961 unique_fct_transactions_order_id .............................. [[31mFAIL 2961[0m in 0.19s]
+[0m13:46:18.800889 [info ] [Thread-4 (]: 6 of 6 PASS unique_stg_orders_order_id ......................................... [[32mPASS[0m in 0.18s]
+[0m13:46:18.803266 [debug] [Thread-2 (]: Finished running node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:46:18.805768 [debug] [Thread-4 (]: Finished running node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:46:18.813008 [debug] [MainThread]: On master: COMMIT
+[0m13:46:18.815364 [debug] [MainThread]: Using postgres connection "master"
+[0m13:46:18.818770 [debug] [MainThread]: On master: COMMIT
+[0m13:46:18.820942 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:46:18.829571 [debug] [MainThread]: SQL status: COMMIT in 0.009 seconds
+[0m13:46:18.832233 [debug] [MainThread]: On master: Close
+[0m13:46:18.834571 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:46:18.836929 [debug] [MainThread]: Connection 'test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a' was properly closed.
+[0m13:46:18.838905 [debug] [MainThread]: Connection 'test.olist.unique_fct_transactions_order_id.916848cae3' was properly closed.
+[0m13:46:18.840784 [debug] [MainThread]: Connection 'test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63' was properly closed.
+[0m13:46:18.842420 [debug] [MainThread]: Connection 'test.olist.unique_stg_orders_order_id.e3b841c71a' was properly closed.
+[0m13:46:18.846412 [info ] [MainThread]: 
+[0m13:46:18.848955 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.73 seconds (0.73s).
+[0m13:46:18.852706 [debug] [MainThread]: Command end result
+[0m13:46:18.996612 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:46:19.010337 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:46:19.025326 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:46:19.048199 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:46:19.050245 [info ] [MainThread]: 
+[0m13:46:19.055977 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:46:19.058166 [info ] [MainThread]: 
+[0m13:46:19.064109 [error] [MainThread]: [[31mERROR[0m]: in test not_null_fct_transactions_payment_value (models/marts/schema.yml)
+[0m13:46:19.066747 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m13:46:19.069589 [info ] [MainThread]: 
+[0m13:46:19.072843 [info ] [MainThread]:   compiled code at target/compiled/olist/models/marts/schema.yml/not_null_fct_transactions_payment_value.sql
+[0m13:46:19.075910 [info ] [MainThread]: 
+[0m13:46:19.079185 [error] [MainThread]: [[31mERROR[0m]: in test unique_fct_transactions_order_id (models/marts/schema.yml)
+[0m13:46:19.082135 [error] [MainThread]:   Got 2961 results, configured to fail if != 0
+[0m13:46:19.084572 [info ] [MainThread]: 
+[0m13:46:19.087485 [info ] [MainThread]:   compiled code at target/compiled/olist/models/marts/schema.yml/unique_fct_transactions_order_id.sql
+[0m13:46:19.090446 [info ] [MainThread]: 
+[0m13:46:19.093500 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=2 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[0m13:46:19.097077 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 2.6009676, "process_in_blocks": "2268", "process_kernel_time": 0.33249, "process_mem_max_rss": "137864", "process_out_blocks": "0", "process_user_time": 3.681427}
+[0m13:46:19.101821 [debug] [MainThread]: Command `dbt test` failed at 13:46:19.101587 after 2.61 seconds
+[0m13:46:19.104687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d5933bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272d165e690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7272cd569410>]}
+[0m13:46:19.107879 [debug] [MainThread]: Flushing usage events
+[0m13:46:20.253777 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:51:21.542889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b8054acd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b8054acb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b805653590>]}
+
+
+============================== 13:51:21.554295 | c4dbd623-1917-41a8-b572-9266adcc4995 ==============================
+[0m13:51:21.554295 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:51:21.557480 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'profiles_dir': '.', 'warn_error': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'use_colors': 'True', 'log_format': 'default', 'quiet': 'False', 'target_path': 'None', 'printer_width': '80', 'empty': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'indirect_selection': 'eager', 'version_check': 'True'}
+[0m13:51:21.861074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b805465410>]}
+[0m13:51:21.946296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b804edf650>]}
+[0m13:51:21.950057 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:51:22.037701 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:51:22.482893 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m13:51:22.485730 [debug] [MainThread]: Partial parsing: added file: olist://models/intermediate/int_transactions1.sql
+[0m13:51:22.488028 [debug] [MainThread]: Partial parsing: updated file: olist://models/marts/fct_transactions.sql
+[0m13:51:22.490630 [debug] [MainThread]: Partial parsing: updated file: olist://models/intermediate/int_transactions.sql
+[0m13:51:23.262732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b803b169d0>]}
+[0m13:51:23.526395 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:51:23.548392 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:51:23.579514 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:51:23.623339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b804eab4d0>]}
+[0m13:51:23.627468 [info ] [MainThread]: Found 5 models, 6 data tests, 477 macros
+[0m13:51:23.630952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b803302650>]}
+[0m13:51:23.637827 [info ] [MainThread]: 
+[0m13:51:23.641161 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:51:23.644033 [info ] [MainThread]: 
+[0m13:51:23.646706 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:51:23.656006 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:51:23.657215 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:51:23.658315 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist'
+[0m13:51:23.702670 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:51:23.703474 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:51:23.704230 [debug] [ThreadPool]: Using postgres connection "list_olist"
+[0m13:51:23.707345 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:51:23.710543 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:51:23.713576 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:51:23.716577 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:23.719539 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:23.722451 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:23.733696 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.017 seconds
+[0m13:51:23.734263 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m13:51:23.736949 [debug] [ThreadPool]: On list_olist: Close
+[0m13:51:23.737478 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m13:51:23.740910 [debug] [ThreadPool]: On list_olist: Close
+[0m13:51:23.746276 [debug] [ThreadPool]: On list_olist: Close
+[0m13:51:23.753263 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_intermediate)
+[0m13:51:23.754123 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_marts)
+[0m13:51:23.755338 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now list_olist_public_staging)
+[0m13:51:23.762598 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:51:23.765709 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:51:23.768452 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:51:23.770496 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:51:23.772334 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:51:23.774040 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:51:23.776044 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:51:23.777455 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:51:23.779364 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:51:23.792685 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.017 seconds
+[0m13:51:23.793332 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.016 seconds
+[0m13:51:23.796335 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:51:23.796874 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.017 seconds
+[0m13:51:23.799257 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:51:23.801329 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:51:23.803755 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:51:23.805952 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:51:23.809474 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:51:23.818568 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:23.822813 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:51:23.829913 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:51:23.845582 [debug] [MainThread]: SQL status: SELECT 4 in 0.016 seconds
+[0m13:51:23.850005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b800cf5210>]}
+[0m13:51:23.853218 [debug] [MainThread]: On master: ROLLBACK
+[0m13:51:23.856320 [debug] [MainThread]: On master: COMMIT
+[0m13:51:23.858955 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:23.861860 [debug] [MainThread]: On master: COMMIT
+[0m13:51:23.864996 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:51:23.867083 [debug] [MainThread]: On master: Close
+[0m13:51:23.874312 [debug] [Thread-1 (]: Began running node model.olist.stg_orders
+[0m13:51:23.874965 [debug] [Thread-2 (]: Began running node model.olist.stg_payments
+[0m13:51:23.877480 [info ] [Thread-1 (]: 1 of 5 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m13:51:23.880130 [info ] [Thread-2 (]: 2 of 5 START sql view model public_staging.stg_payments ........................ [RUN]
+[0m13:51:23.882297 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_staging, now model.olist.stg_orders)
+[0m13:51:23.884535 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_marts, now model.olist.stg_payments)
+[0m13:51:23.886425 [debug] [Thread-1 (]: Began compiling node model.olist.stg_orders
+[0m13:51:23.888627 [debug] [Thread-2 (]: Began compiling node model.olist.stg_payments
+[0m13:51:23.896098 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist.stg_orders"
+[0m13:51:23.898940 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist.stg_payments"
+[0m13:51:23.912602 [debug] [Thread-1 (]: Began executing node model.olist.stg_orders
+[0m13:51:23.914714 [debug] [Thread-2 (]: Began executing node model.olist.stg_payments
+[0m13:51:23.966011 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist.stg_orders"
+[0m13:51:23.966600 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist.stg_payments"
+[0m13:51:23.978711 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:51:23.979703 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:51:23.981484 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+
+  create view "olist"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  customer_id::text as customer_id,
+  order_status::text as order_status,
+  order_purchase_timestamp::timestamp as purchased_at,
+  ds::date as ds
+from raw.raw_orders
+where order_id is not null
+  );
+[0m13:51:23.983488 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+
+  create view "olist"."public_staging"."stg_payments__dbt_tmp"
+    
+    
+  as (
+    select
+  order_id::text as order_id,
+  payment_type::text as payment_type,
+  payment_installments::int as installments,
+  payment_value::numeric as payment_value,
+  ds::date as ds
+from raw.raw_payments
+where order_id is not null
+  );
+[0m13:51:23.985230 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:51:23.986783 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:51:23.996593 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.011 seconds
+[0m13:51:23.997303 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.010 seconds
+[0m13:51:24.008317 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:51:24.017372 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:51:24.027061 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+alter table "olist"."public_staging"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m13:51:24.032304 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+alter table "olist"."public_staging"."stg_payments" rename to "stg_payments__dbt_backup"
+[0m13:51:24.048282 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.058781 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.066234 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:51:24.079796 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:51:24.090266 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+alter table "olist"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m13:51:24.094287 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+alter table "olist"."public_staging"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m13:51:24.105607 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.114215 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.146575 [debug] [Thread-1 (]: On model.olist.stg_orders: COMMIT
+[0m13:51:24.149028 [debug] [Thread-2 (]: On model.olist.stg_payments: COMMIT
+[0m13:51:24.157533 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:51:24.168274 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:51:24.173522 [debug] [Thread-1 (]: On model.olist.stg_orders: COMMIT
+[0m13:51:24.179960 [debug] [Thread-2 (]: On model.olist.stg_payments: COMMIT
+[0m13:51:24.194179 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m13:51:24.196232 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m13:51:24.205273 [debug] [Thread-1 (]: Applying DROP to: "olist"."public_staging"."stg_orders__dbt_backup"
+[0m13:51:24.213188 [debug] [Thread-2 (]: Applying DROP to: "olist"."public_staging"."stg_payments__dbt_backup"
+[0m13:51:24.226609 [debug] [Thread-1 (]: Using postgres connection "model.olist.stg_orders"
+[0m13:51:24.229835 [debug] [Thread-2 (]: Using postgres connection "model.olist.stg_payments"
+[0m13:51:24.241871 [debug] [Thread-1 (]: On model.olist.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_orders"} */
+drop view if exists "olist"."public_staging"."stg_orders__dbt_backup" cascade
+[0m13:51:24.250387 [debug] [Thread-2 (]: On model.olist.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.stg_payments"} */
+drop view if exists "olist"."public_staging"."stg_payments__dbt_backup" cascade
+[0m13:51:24.288737 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.025 seconds
+[0m13:51:24.295071 [debug] [Thread-1 (]: On model.olist.stg_orders: Close
+[0m13:51:24.295957 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.022 seconds
+[0m13:51:24.301088 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b8003dff10>]}
+[0m13:51:24.305146 [debug] [Thread-2 (]: On model.olist.stg_payments: Close
+[0m13:51:24.307999 [info ] [Thread-1 (]: 1 of 5 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.42s]
+[0m13:51:24.310882 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b8002cc2d0>]}
+[0m13:51:24.312945 [debug] [Thread-1 (]: Finished running node model.olist.stg_orders
+[0m13:51:24.315459 [info ] [Thread-2 (]: 2 of 5 OK created sql view model public_staging.stg_payments ................... [[32mCREATE VIEW[0m in 0.43s]
+[0m13:51:24.324053 [debug] [Thread-2 (]: Finished running node model.olist.stg_payments
+[0m13:51:24.328587 [debug] [Thread-4 (]: Began running node model.olist.int_transactions
+[0m13:51:24.329335 [debug] [Thread-3 (]: Began running node model.olist.int_transactions1
+[0m13:51:24.332392 [info ] [Thread-4 (]: 3 of 5 START sql view model public_intermediate.int_transactions ............... [RUN]
+[0m13:51:24.336555 [info ] [Thread-3 (]: 4 of 5 START sql view model public_intermediate.int_transactions1 .............. [RUN]
+[0m13:51:24.339926 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.olist.int_transactions'
+[0m13:51:24.342579 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_olist_public_intermediate, now model.olist.int_transactions1)
+[0m13:51:24.345775 [debug] [Thread-4 (]: Began compiling node model.olist.int_transactions
+[0m13:51:24.349610 [debug] [Thread-3 (]: Began compiling node model.olist.int_transactions1
+[0m13:51:24.355377 [debug] [Thread-4 (]: Writing injected SQL for node "model.olist.int_transactions"
+[0m13:51:24.360384 [debug] [Thread-3 (]: Writing injected SQL for node "model.olist.int_transactions1"
+[0m13:51:24.378628 [debug] [Thread-3 (]: Began executing node model.olist.int_transactions1
+[0m13:51:24.382527 [debug] [Thread-4 (]: Began executing node model.olist.int_transactions
+[0m13:51:24.388281 [debug] [Thread-3 (]: Writing runtime sql for node "model.olist.int_transactions1"
+[0m13:51:24.396085 [debug] [Thread-4 (]: Writing runtime sql for node "model.olist.int_transactions"
+[0m13:51:24.410896 [debug] [Thread-3 (]: Using postgres connection "model.olist.int_transactions1"
+[0m13:51:24.415154 [debug] [Thread-3 (]: On model.olist.int_transactions1: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions1"} */
+
+  create view "olist"."public_intermediate"."int_transactions1__dbt_tmp"
+    
+    
+  as (
+    select
+  o.order_id, o.customer_id, o.order_status, o.purchased_at,
+  p.payment_type, p.installments, p.payment_value,
+  o.ds
+from "olist"."public_staging"."stg_orders" o
+left join "olist"."public_staging"."stg_payments" p using (order_id)
+  );
+[0m13:51:24.419123 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:51:24.420042 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:51:24.423847 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+
+  create view "olist"."public_intermediate"."int_transactions__dbt_tmp"
+    
+    
+  as (
+    with payments_agg as (
+    select
+        order_id,
+        sum(payment_value) as payment_value,
+        max(installments) as installments,
+        max(payment_type) as payment_type
+    from "olist"."public_staging"."stg_payments"
+    group by order_id
+)
+select
+  o.order_id, o.customer_id, o.order_status, o.purchased_at,
+  p.payment_type, p.installments,
+  coalesce(p.payment_value, 0) as payment_value,
+  o.ds
+from "olist"."public_staging"."stg_orders" o
+left join payments_agg p using (order_id)
+  );
+[0m13:51:24.427849 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:51:24.429183 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.010 seconds
+[0m13:51:24.435872 [debug] [Thread-3 (]: Using postgres connection "model.olist.int_transactions1"
+[0m13:51:24.438851 [debug] [Thread-3 (]: On model.olist.int_transactions1: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions1"} */
+alter table "olist"."public_intermediate"."int_transactions1__dbt_tmp" rename to "int_transactions1"
+[0m13:51:24.442768 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.447192 [debug] [Thread-3 (]: On model.olist.int_transactions1: COMMIT
+[0m13:51:24.450357 [debug] [Thread-3 (]: Using postgres connection "model.olist.int_transactions1"
+[0m13:51:24.450944 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.023 seconds
+[0m13:51:24.453490 [debug] [Thread-3 (]: On model.olist.int_transactions1: COMMIT
+[0m13:51:24.458973 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:51:24.463927 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+alter table "olist"."public_intermediate"."int_transactions__dbt_tmp" rename to "int_transactions"
+[0m13:51:24.467084 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:24.468570 [debug] [Thread-3 (]: SQL status: COMMIT in 0.007 seconds
+[0m13:51:24.471212 [debug] [Thread-4 (]: On model.olist.int_transactions: COMMIT
+[0m13:51:24.477337 [debug] [Thread-3 (]: Applying DROP to: "olist"."public_intermediate"."int_transactions1__dbt_backup"
+[0m13:51:24.480447 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:51:24.483624 [debug] [Thread-3 (]: Using postgres connection "model.olist.int_transactions1"
+[0m13:51:24.486068 [debug] [Thread-4 (]: On model.olist.int_transactions: COMMIT
+[0m13:51:24.489058 [debug] [Thread-3 (]: On model.olist.int_transactions1: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions1"} */
+drop view if exists "olist"."public_intermediate"."int_transactions1__dbt_backup" cascade
+[0m13:51:24.493697 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:51:24.497333 [debug] [Thread-3 (]: On model.olist.int_transactions1: Close
+[0m13:51:24.500084 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b807c88e90>]}
+[0m13:51:24.500773 [debug] [Thread-4 (]: SQL status: COMMIT in 0.009 seconds
+[0m13:51:24.503818 [info ] [Thread-3 (]: 4 of 5 OK created sql view model public_intermediate.int_transactions1 ......... [[32mCREATE VIEW[0m in 0.16s]
+[0m13:51:24.508936 [debug] [Thread-4 (]: Applying DROP to: "olist"."public_intermediate"."int_transactions__dbt_backup"
+[0m13:51:24.511606 [debug] [Thread-3 (]: Finished running node model.olist.int_transactions1
+[0m13:51:24.514772 [debug] [Thread-4 (]: Using postgres connection "model.olist.int_transactions"
+[0m13:51:24.519308 [debug] [Thread-4 (]: On model.olist.int_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.int_transactions"} */
+drop view if exists "olist"."public_intermediate"."int_transactions__dbt_backup" cascade
+[0m13:51:24.522188 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:51:24.525887 [debug] [Thread-4 (]: On model.olist.int_transactions: Close
+[0m13:51:24.528070 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b8001f83d0>]}
+[0m13:51:24.530774 [info ] [Thread-4 (]: 3 of 5 OK created sql view model public_intermediate.int_transactions .......... [[32mCREATE VIEW[0m in 0.19s]
+[0m13:51:24.532926 [debug] [Thread-4 (]: Finished running node model.olist.int_transactions
+[0m13:51:24.535477 [debug] [Thread-2 (]: Began running node model.olist.fct_transactions
+[0m13:51:24.537371 [info ] [Thread-2 (]: 5 of 5 START sql table model public_marts.fct_transactions ..................... [RUN]
+[0m13:51:24.539505 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.olist.stg_payments, now model.olist.fct_transactions)
+[0m13:51:24.541376 [debug] [Thread-2 (]: Began compiling node model.olist.fct_transactions
+[0m13:51:24.545415 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist.fct_transactions"
+[0m13:51:24.561185 [debug] [Thread-2 (]: Began executing node model.olist.fct_transactions
+[0m13:51:24.587819 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist.fct_transactions"
+[0m13:51:24.611230 [debug] [Thread-2 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:51:24.613625 [debug] [Thread-2 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+
+  
+    
+
+  create  table "olist"."public_marts"."fct_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+  order_id, customer_id, order_status, payment_type,
+  payment_value,
+  -- flag sederhana ala fraud/risk: cicilan jumbo / voucher besar
+  ((coalesce(installments, 0) >= 10 or (payment_type = 'voucher' and payment_value > 500))) as is_risky,
+  date_trunc('day', purchased_at)::date as txn_date
+from "olist"."public_intermediate"."int_transactions"
+  );
+  
+[0m13:51:24.615923 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:51:25.170149 [debug] [Thread-2 (]: SQL status: SELECT 99441 in 0.554 seconds
+[0m13:51:25.180302 [debug] [Thread-2 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:51:25.184236 [debug] [Thread-2 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+alter table "olist"."public_marts"."fct_transactions" rename to "fct_transactions__dbt_backup"
+[0m13:51:25.187647 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:51:25.192965 [debug] [Thread-2 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:51:25.195930 [debug] [Thread-2 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+alter table "olist"."public_marts"."fct_transactions__dbt_tmp" rename to "fct_transactions"
+[0m13:51:25.199379 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:51:25.203761 [debug] [Thread-2 (]: On model.olist.fct_transactions: COMMIT
+[0m13:51:25.206617 [debug] [Thread-2 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:51:25.209227 [debug] [Thread-2 (]: On model.olist.fct_transactions: COMMIT
+[0m13:51:25.912904 [debug] [Thread-2 (]: SQL status: COMMIT in 0.701 seconds
+[0m13:51:25.919200 [debug] [Thread-2 (]: Applying DROP to: "olist"."public_marts"."fct_transactions__dbt_backup"
+[0m13:51:25.927304 [debug] [Thread-2 (]: Using postgres connection "model.olist.fct_transactions"
+[0m13:51:25.929727 [debug] [Thread-2 (]: On model.olist.fct_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "model.olist.fct_transactions"} */
+drop table if exists "olist"."public_marts"."fct_transactions__dbt_backup" cascade
+[0m13:51:25.951518 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.019 seconds
+[0m13:51:25.956943 [debug] [Thread-2 (]: On model.olist.fct_transactions: Close
+[0m13:51:25.959705 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4dbd623-1917-41a8-b572-9266adcc4995', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b80033bd10>]}
+[0m13:51:25.963788 [info ] [Thread-2 (]: 5 of 5 OK created sql table model public_marts.fct_transactions ................ [[32mSELECT 99441[0m in 1.42s]
+[0m13:51:25.965840 [debug] [Thread-2 (]: Finished running node model.olist.fct_transactions
+[0m13:51:25.969640 [debug] [MainThread]: On master: COMMIT
+[0m13:51:25.972328 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:25.974115 [debug] [MainThread]: On master: COMMIT
+[0m13:51:25.975483 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:51:25.982881 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m13:51:25.984868 [debug] [MainThread]: On master: Close
+[0m13:51:25.986743 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:51:25.988956 [debug] [MainThread]: Connection 'model.olist.stg_orders' was properly closed.
+[0m13:51:25.990650 [debug] [MainThread]: Connection 'model.olist.fct_transactions' was properly closed.
+[0m13:51:25.996983 [debug] [MainThread]: Connection 'model.olist.int_transactions1' was properly closed.
+[0m13:51:25.998542 [debug] [MainThread]: Connection 'model.olist.int_transactions' was properly closed.
+[0m13:51:26.001559 [info ] [MainThread]: 
+[0m13:51:26.003510 [info ] [MainThread]: Finished running 1 table model, 4 view models in 0 hours 0 minutes and 2.35 seconds (2.35s).
+[0m13:51:26.006648 [debug] [MainThread]: Command end result
+[0m13:51:26.117879 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:51:26.127604 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:51:26.139535 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:51:26.158127 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:51:26.160236 [info ] [MainThread]: 
+[0m13:51:26.162220 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:51:26.164341 [info ] [MainThread]: 
+[0m13:51:26.166082 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m13:51:26.169850 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.778142, "process_in_blocks": "1037", "process_kernel_time": 0.386006, "process_mem_max_rss": "145452", "process_out_blocks": "0", "process_user_time": 4.418974}
+[0m13:51:26.171780 [debug] [MainThread]: Command `dbt run` succeeded at 13:51:26.171614 after 4.78 seconds
+[0m13:51:26.173538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b809903c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b805434a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b809943350>]}
+[0m13:51:26.175442 [debug] [MainThread]: Flushing usage events
+[0m13:51:27.733995 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:51:31.575784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9d922ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9da4b9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9d9231d0>]}
+
+
+============================== 13:51:31.586291 | 733bb501-2a7f-4664-900f-208287b0c817 ==============================
+[0m13:51:31.586291 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:51:31.589316 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'target_path': 'None', 'use_colors': 'True', 'log_format': 'default', 'partial_parse': 'True', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'profiles_dir': '.', 'log_cache_events': 'False', 'hints_enabled': 'True', 'debug': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'quiet': 'False', 'empty': 'None', 'log_path': '/opt/airflow/dbt/logs', 'write_json': 'True'}
+[0m13:51:31.892524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9d90c3d0>]}
+[0m13:51:31.974764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786ea02e83d0>]}
+[0m13:51:31.985940 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m13:51:32.077521 [debug] [MainThread]: checksum: 87ffbb80ddf0d790f9c291626b14e42fb072d8be979eb7852c44d7c47130d5ef, vars: {}, profile: olist, target: dev, version: 1.12.5
+[0m13:51:32.513908 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:51:32.517095 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:51:32.520133 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:51:32.534075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9da50850>]}
+[0m13:51:32.925499 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:51:32.950988 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:51:32.979013 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:51:33.028625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9cbb4790>]}
+[0m13:51:33.030909 [info ] [MainThread]: Found 5 models, 6 data tests, 477 macros
+[0m13:51:33.035292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9d2cf450>]}
+[0m13:51:33.040016 [info ] [MainThread]: 
+[0m13:51:33.042259 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:51:33.044857 [info ] [MainThread]: 
+[0m13:51:33.048849 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:51:33.062900 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_intermediate'
+[0m13:51:33.064151 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_marts'
+[0m13:51:33.065351 [debug] [ThreadPool]: Acquiring new postgres connection 'list_olist_public_staging'
+[0m13:51:33.116811 [debug] [ThreadPool]: Using postgres connection "list_olist_public_intermediate"
+[0m13:51:33.117417 [debug] [ThreadPool]: Using postgres connection "list_olist_public_marts"
+[0m13:51:33.118118 [debug] [ThreadPool]: Using postgres connection "list_olist_public_staging"
+[0m13:51:33.120433 [debug] [ThreadPool]: On list_olist_public_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_intermediate"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_intermediate'
+  
+[0m13:51:33.125393 [debug] [ThreadPool]: On list_olist_public_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_marts"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_marts'
+  
+[0m13:51:33.128663 [debug] [ThreadPool]: On list_olist_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "list_olist_public_staging"} */
+select
+      'olist' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'olist' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'olist' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m13:51:33.131610 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:33.134161 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:33.137258 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:51:33.152825 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.021 seconds
+[0m13:51:33.154203 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.020 seconds
+[0m13:51:33.157111 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.020 seconds
+[0m13:51:33.160612 [debug] [ThreadPool]: On list_olist_public_intermediate: ROLLBACK
+[0m13:51:33.164733 [debug] [ThreadPool]: On list_olist_public_marts: ROLLBACK
+[0m13:51:33.168002 [debug] [ThreadPool]: On list_olist_public_staging: ROLLBACK
+[0m13:51:33.170809 [debug] [ThreadPool]: On list_olist_public_intermediate: Close
+[0m13:51:33.173040 [debug] [ThreadPool]: On list_olist_public_marts: Close
+[0m13:51:33.175186 [debug] [ThreadPool]: On list_olist_public_staging: Close
+[0m13:51:33.186735 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:33.189438 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:51:33.191983 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:51:33.214622 [debug] [MainThread]: SQL status: SELECT 6 in 0.023 seconds
+[0m13:51:33.223240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '733bb501-2a7f-4664-900f-208287b0c817', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9d296790>]}
+[0m13:51:33.226751 [debug] [MainThread]: On master: ROLLBACK
+[0m13:51:33.230395 [debug] [MainThread]: On master: COMMIT
+[0m13:51:33.233135 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:33.236075 [debug] [MainThread]: On master: COMMIT
+[0m13:51:33.239256 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:51:33.242514 [debug] [MainThread]: On master: Close
+[0m13:51:33.252133 [debug] [Thread-1 (]: Began running node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:51:33.252953 [debug] [Thread-2 (]: Began running node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:51:33.253579 [debug] [Thread-3 (]: Began running node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:51:33.254312 [debug] [Thread-4 (]: Began running node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:51:33.256524 [info ] [Thread-1 (]: 1 of 6 START test accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable  [RUN]
+[0m13:51:33.259668 [info ] [Thread-2 (]: 2 of 6 START test not_null_fct_transactions_order_id ........................... [RUN]
+[0m13:51:33.262652 [info ] [Thread-3 (]: 3 of 6 START test not_null_fct_transactions_payment_value ...................... [RUN]
+[0m13:51:33.265851 [info ] [Thread-4 (]: 4 of 6 START test not_null_stg_orders_order_id ................................. [RUN]
+[0m13:51:33.269103 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_olist_public_staging, now test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63)
+[0m13:51:33.271632 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_olist_public_marts, now test.olist.not_null_fct_transactions_order_id.7525e16923)
+[0m13:51:33.274463 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_olist_public_intermediate, now test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a)
+[0m13:51:33.277357 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.olist.not_null_stg_orders_order_id.81cfe2fe64'
+[0m13:51:33.280464 [debug] [Thread-1 (]: Began compiling node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:51:33.283035 [debug] [Thread-2 (]: Began compiling node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:51:33.285712 [debug] [Thread-3 (]: Began compiling node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:51:33.288703 [debug] [Thread-4 (]: Began compiling node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:51:33.337402 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:51:33.368666 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:51:33.369589 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:51:33.377804 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:51:33.400152 [debug] [Thread-1 (]: Began executing node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:51:33.401497 [debug] [Thread-2 (]: Began executing node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:51:33.402420 [debug] [Thread-3 (]: Began executing node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:51:33.409788 [debug] [Thread-4 (]: Began executing node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:51:33.425448 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:51:33.429451 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:51:33.435179 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:51:33.439845 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:51:33.466953 [debug] [Thread-3 (]: Using postgres connection "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"
+[0m13:51:33.468605 [debug] [Thread-1 (]: Using postgres connection "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"
+[0m13:51:33.469532 [debug] [Thread-2 (]: Using postgres connection "test.olist.not_null_fct_transactions_order_id.7525e16923"
+[0m13:51:33.474327 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select payment_value
+from "olist"."public_marts"."fct_transactions"
+where payment_value is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.475998 [debug] [Thread-4 (]: Using postgres connection "test.olist.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:51:33.480140 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from "olist"."public_staging"."stg_orders"
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','shipped','canceled','invoiced','processing','created','approved','unavailable'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.483361 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_fct_transactions_order_id.7525e16923"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "olist"."public_marts"."fct_transactions"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.486369 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:51:33.490793 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.not_null_stg_orders_order_id.81cfe2fe64"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "olist"."public_staging"."stg_orders"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.493831 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:51:33.496768 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:51:33.502637 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:51:33.523198 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.037 seconds
+[0m13:51:33.531935 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: ROLLBACK
+[0m13:51:33.533024 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m13:51:33.533818 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.031 seconds
+[0m13:51:33.534333 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.038 seconds
+[0m13:51:33.537110 [debug] [Thread-3 (]: On test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a: Close
+[0m13:51:33.541613 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: ROLLBACK
+[0m13:51:33.546129 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: ROLLBACK
+[0m13:51:33.550551 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: ROLLBACK
+[0m13:51:33.554102 [info ] [Thread-3 (]: 3 of 6 PASS not_null_fct_transactions_payment_value ............................ [[32mPASS[0m in 0.28s]
+[0m13:51:33.556930 [debug] [Thread-1 (]: On test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63: Close
+[0m13:51:33.559548 [debug] [Thread-4 (]: On test.olist.not_null_stg_orders_order_id.81cfe2fe64: Close
+[0m13:51:33.562248 [debug] [Thread-2 (]: On test.olist.not_null_fct_transactions_order_id.7525e16923: Close
+[0m13:51:33.564860 [debug] [Thread-3 (]: Finished running node test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a
+[0m13:51:33.567440 [info ] [Thread-1 (]: 1 of 6 PASS accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable  [[32mPASS[0m in 0.30s]
+[0m13:51:33.570568 [info ] [Thread-4 (]: 4 of 6 PASS not_null_stg_orders_order_id ....................................... [[32mPASS[0m in 0.29s]
+[0m13:51:33.574314 [info ] [Thread-2 (]: 2 of 6 PASS not_null_fct_transactions_order_id ................................. [[32mPASS[0m in 0.30s]
+[0m13:51:33.576972 [debug] [Thread-3 (]: Began running node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:51:33.580153 [debug] [Thread-1 (]: Finished running node test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63
+[0m13:51:33.583093 [debug] [Thread-4 (]: Finished running node test.olist.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:51:33.585989 [debug] [Thread-2 (]: Finished running node test.olist.not_null_fct_transactions_order_id.7525e16923
+[0m13:51:33.588762 [info ] [Thread-3 (]: 5 of 6 START test unique_fct_transactions_order_id ............................. [RUN]
+[0m13:51:33.591437 [debug] [Thread-1 (]: Began running node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:51:33.609828 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.olist.not_null_fct_transactions_payment_value.5cb1f9bc7a, now test.olist.unique_fct_transactions_order_id.916848cae3)
+[0m13:51:33.621952 [info ] [Thread-1 (]: 6 of 6 START test unique_stg_orders_order_id ................................... [RUN]
+[0m13:51:33.629441 [debug] [Thread-3 (]: Began compiling node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:51:33.636710 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.olist.accepted_values_stg_orders_order_status__delivered__shipped__canceled__invoiced__processing__created__approved__unavailable.88bb467c63, now test.olist.unique_stg_orders_order_id.e3b841c71a)
+[0m13:51:33.654517 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:51:33.656546 [debug] [Thread-1 (]: Began compiling node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:51:33.682079 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:51:33.707578 [debug] [Thread-3 (]: Began executing node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:51:33.713815 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:51:33.714719 [debug] [Thread-1 (]: Began executing node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:51:33.722725 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:51:33.736053 [debug] [Thread-3 (]: Using postgres connection "test.olist.unique_fct_transactions_order_id.916848cae3"
+[0m13:51:33.739352 [debug] [Thread-3 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.unique_fct_transactions_order_id.916848cae3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "olist"."public_marts"."fct_transactions"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.740242 [debug] [Thread-1 (]: Using postgres connection "test.olist.unique_stg_orders_order_id.e3b841c71a"
+[0m13:51:33.742899 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:51:33.746681 [debug] [Thread-1 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "olist", "target_name": "dev", "node_id": "test.olist.unique_stg_orders_order_id.e3b841c71a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "olist"."public_staging"."stg_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:51:33.755275 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:51:33.826483 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.084 seconds
+[0m13:51:33.831315 [debug] [Thread-3 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: ROLLBACK
+[0m13:51:33.834648 [debug] [Thread-3 (]: On test.olist.unique_fct_transactions_order_id.916848cae3: Close
+[0m13:51:33.835220 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.080 seconds
+[0m13:51:33.838054 [info ] [Thread-3 (]: 5 of 6 PASS unique_fct_transactions_order_id ................................... [[32mPASS[0m in 0.23s]
+[0m13:51:33.841719 [debug] [Thread-1 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: ROLLBACK
+[0m13:51:33.844859 [debug] [Thread-3 (]: Finished running node test.olist.unique_fct_transactions_order_id.916848cae3
+[0m13:51:33.847655 [debug] [Thread-1 (]: On test.olist.unique_stg_orders_order_id.e3b841c71a: Close
+[0m13:51:33.853074 [info ] [Thread-1 (]: 6 of 6 PASS unique_stg_orders_order_id ......................................... [[32mPASS[0m in 0.22s]
+[0m13:51:33.856436 [debug] [Thread-1 (]: Finished running node test.olist.unique_stg_orders_order_id.e3b841c71a
+[0m13:51:33.860075 [debug] [MainThread]: On master: COMMIT
+[0m13:51:33.862332 [debug] [MainThread]: Using postgres connection "master"
+[0m13:51:33.864062 [debug] [MainThread]: On master: COMMIT
+[0m13:51:33.866726 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:51:33.874831 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m13:51:33.876857 [debug] [MainThread]: On master: Close
+[0m13:51:33.879461 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:51:33.881763 [debug] [MainThread]: Connection 'test.olist.unique_fct_transactions_order_id.916848cae3' was properly closed.
+[0m13:51:33.883448 [debug] [MainThread]: Connection 'test.olist.not_null_fct_transactions_order_id.7525e16923' was properly closed.
+[0m13:51:33.885097 [debug] [MainThread]: Connection 'test.olist.unique_stg_orders_order_id.e3b841c71a' was properly closed.
+[0m13:51:33.887030 [debug] [MainThread]: Connection 'test.olist.not_null_stg_orders_order_id.81cfe2fe64' was properly closed.
+[0m13:51:33.888681 [info ] [MainThread]: 
+[0m13:51:33.890327 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.84 seconds (0.84s).
+[0m13:51:33.893115 [debug] [MainThread]: Command end result
+[0m13:51:34.013167 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m13:51:34.028413 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m13:51:34.041943 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt/target/osi_document.json
+[0m13:51:34.061264 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m13:51:34.063929 [info ] [MainThread]: 
+[0m13:51:34.068276 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:51:34.080261 [info ] [MainThread]: 
+[0m13:51:34.091727 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[0m13:51:34.096234 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.662957, "process_in_blocks": "1042", "process_kernel_time": 0.37516, "process_mem_max_rss": "137636", "process_out_blocks": "0", "process_user_time": 3.560032}
+[0m13:51:34.099334 [debug] [MainThread]: Command `dbt test` succeeded at 13:51:34.099065 after 2.67 seconds
+[0m13:51:34.102440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9db5ed90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786ea1de7c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786e9c7ddad0>]}
+[0m13:51:34.104437 [debug] [MainThread]: Flushing usage events
+[0m13:51:35.263972 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -7,5 +7,6 @@ olist:
       user: "{{ env_var('POSTGRES_USER', 'de') }}"
       pass: "{{ env_var('POSTGRES_PASSWORD') }}"
       dbname: "{{ env_var('POSTGRES_DB', 'olist') }}"
+      port: 5432
       schema: public
       threads: 4
