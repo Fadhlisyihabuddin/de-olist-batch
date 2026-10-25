@@ -16,7 +16,8 @@ services:
       - "5432:5432"
 
   airflow:
-    image: apache/airflow:2.9.3-python3.11
+    build: .
+    image: de-olist-airflow:latest
     env_file: .env
     depends_on:
       postgres:
@@ -36,8 +37,7 @@ services:
       - ./dbt:/opt/airflow/dbt
       - ./data:/opt/airflow/data
     command: >
-      bash -c "pip install -q dbt-postgres boto3 pandas &&
-        airflow db migrate &&
+      bash -c "airflow db migrate &&
         (airflow users create --username admin --password admin --firstname de --lastname eng --role Admin --email admin@local || true) &&
         (airflow scheduler & airflow webserver)"
     ports:

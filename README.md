@@ -14,7 +14,7 @@ Airflow DAG `olist_daily`: bronze_to_s3 >> load_raw_postgres >> dbt_run >> dbt_t
 ```bash
 cp .env.example .env   # isi AWS key + S3_BUCKET + password
 # download https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce -> taruh 3 CSV di data/
-docker compose up -d
+docker compose up -d --build
 # Airflow: localhost:8080 (admin/admin) -> unpause olist_daily -> Trigger
 # Metabase: localhost:3000 -> Add Postgres (host postgres, db/user/pass dari .env)
 ```
