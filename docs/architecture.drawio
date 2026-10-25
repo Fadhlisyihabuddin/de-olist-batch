@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net" version="22.0.0">
+  <diagram name="Olist Batch ELT Architecture" id="olist-elt-arch">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Olist E-Commerce Batch ELT Pipeline Architecture" style="text;html=1;fontSize=18;fontStyle=1;fontColor=#1E293B;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="AWS S3 (Bronze) &amp;rarr; PostgreSQL (Raw) &amp;rarr; dbt Core (Dimensional Modeling) &amp;rarr; Metabase | Orchestrated by Apache Airflow" style="text;html=1;fontSize=12;fontColor=#64748B;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="800" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- CONTAINER: Docker Environment -->
+        <mxCell id="docker_env" value="Containerized Environment (Docker Compose)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontStyle=1;fontColor=#475569;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="1120" height="520" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 1: Source Data -->
+        <mxCell id="source_group" value="Data Source" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=1;fontStyle=1;fontColor=#334155;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="170" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="src_kaggle" value="Kaggle Olist Dataset&#10;(Brazilian E-Commerce)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#94A3B8;fontStyle=1;fontSize=11;fontColor=#1E293B;" vertex="1" parent="1">
+          <mxGeometry x="65" y="180" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="src_orders" value="olist_orders.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=10;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src_payments" value="olist_payments.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=10;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="70" y="290" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src_customers" value="olist_customers.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=10;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="70" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src_local" value="Local Volume: data/" style="text;html=1;fontSize=10;fontStyle=2;fontColor=#64748B;align=center;" vertex="1" parent="1">
+          <mxGeometry x="65" y="400" width="140" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 2: AWS S3 Data Lake -->
+        <mxCell id="s3_group" value="AWS Cloud Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#FDE68A;strokeWidth=1;fontStyle=1;fontColor=#92400E;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="270" y="140" width="180" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_box" value="AWS S3 Bucket&#10;(Data Lake Bronze)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#78350F;" vertex="1" parent="1">
+          <mxGeometry x="285" y="180" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_partition" value="bronze/{ds}/&#10;&#10;Partitioned by Date&#10;Overwrite = Idempotent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FCD34D;fontSize=10;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="290" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_iam" value="IAM User: de-olist-airflow&#10;Region: ap-southeast-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontSize=10;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="290" y="340" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 3: PostgreSQL Raw -->
+        <mxCell id="pg_group" value="Relational Storage (Postgres)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#BFDBFE;strokeWidth=1;fontStyle=1;fontColor=#1E40AF;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="140" width="180" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_box" value="PostgreSQL 16&#10;(Schema: raw)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#1E3A8A;" vertex="1" parent="1">
+          <mxGeometry x="515" y="180" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_raw_orders" value="raw.raw_orders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93C5FD;fontSize=10;fontColor=#1E40AF;" vertex="1" parent="1">
+          <mxGeometry x="525" y="250" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_raw_payments" value="raw.raw_payments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93C5FD;fontSize=10;fontColor=#1E40AF;" vertex="1" parent="1">
+          <mxGeometry x="525" y="290" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_raw_customers" value="raw.raw_customers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93C5FD;fontSize=10;fontColor=#1E40AF;" vertex="1" parent="1">
+          <mxGeometry x="525" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_strategy" value="DELETE + INSERT per ds&#10;(Atomic idempotency)" style="text;html=1;fontSize=10;fontStyle=2;fontColor=#2563EB;align=center;" vertex="1" parent="1">
+          <mxGeometry x="515" y="390" width="150" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 4: dbt Core Transformations -->
+        <mxCell id="dbt_group" value="Data Modeling (dbt Core)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FECDD3;strokeWidth=1;fontStyle=1;fontColor=#9F1239;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="730" y="140" width="200" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="dbt_box" value="dbt Core 1.8+&#10;(Transform &amp;amp; Test)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#F43F5E;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#881337;" vertex="1" parent="1">
+          <mxGeometry x="750" y="180" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbt_staging" value="Staging: stg_orders, stg_payments&#10;(Clean, typecast, view)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FDA4AF;fontSize=9;fontColor=#9F1239;" vertex="1" parent="1">
+          <mxGeometry x="745" y="245" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dbt_inter" value="Intermediate: int_transactions&#10;(Payment aggregations by order)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FDA4AF;fontSize=9;fontColor=#9F1239;" vertex="1" parent="1">
+          <mxGeometry x="745" y="290" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dbt_marts" value="Marts: fct_transactions&#10;(Materialized table + is_risky flag)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;fontStyle=1;fontSize=9;fontColor=#881337;" vertex="1" parent="1">
+          <mxGeometry x="745" y="335" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dbt_tests" value="Quality Tests: not_null, unique, accepted_values" style="text;html=1;fontSize=9;fontStyle=2;fontColor=#BE123C;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="385" width="190" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 5: Metabase BI -->
+        <mxCell id="bi_group" value="Business Intelligence" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#BBF7D0;strokeWidth=1;fontStyle=1;fontColor=#166534;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="140" width="150" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="metabase_box" value="Metabase&#10;(Serving Layer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#14532D;" vertex="1" parent="1">
+          <mxGeometry x="995" y="180" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bi_dash1" value="Daily Transaction Trends" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#86EFAC;fontSize=9;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="995" y="255" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="bi_dash2" value="GMV &amp; Order Status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#86EFAC;fontSize=9;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="995" y="300" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="bi_dash3" value="High-Risk Order Flags" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#86EFAC;fontSize=9;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="995" y="345" width="120" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- ORCHESTRATION BANNER: Airflow -->
+        <mxCell id="af_banner" value="Orchestration &amp;amp; Workflow Automation: Apache Airflow 2.9 (DAG: olist_daily)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#D8B4FE;strokeWidth=1.5;fontStyle=1;fontSize=12;fontColor=#6B21A8;align=left;verticalAlign=middle;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="480" width="1080" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task1" value="Task 1: bronze_to_s3&#10;(python to_bronze.py {{ ds }})" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A855F7;fontSize=10;fontColor=#581C87;" vertex="1" parent="1">
+          <mxGeometry x="70" y="525" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task2" value="Task 2: load_raw_postgres&#10;(python to_postgres.py {{ ds }})" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A855F7;fontSize=10;fontColor=#581C87;" vertex="1" parent="1">
+          <mxGeometry x="320" y="525" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task3" value="Task 3: dbt_run&#10;(dbt run)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A855F7;fontSize=10;fontColor=#581C87;" vertex="1" parent="1">
+          <mxGeometry x="580" y="525" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task4" value="Task 4: dbt_test&#10;(dbt test)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A855F7;fontSize=10;fontColor=#581C87;" vertex="1" parent="1">
+          <mxGeometry x="790" y="525" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Pipeline Flow Arrows -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#334155;" edge="1" parent="1" source="source_group" target="s3_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_edge1" value="Upload" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#475569;" vertex="1" connectable="0" parent="edge1">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#334155;" edge="1" parent="1" source="s3_group" target="pg_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_edge2" value="Fetch &amp;amp; Ingest" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#475569;" vertex="1" connectable="0" parent="edge2">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#334155;" edge="1" parent="1" source="pg_group" target="dbt_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_edge3" value="Transform" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#475569;" vertex="1" connectable="0" parent="edge3">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#334155;" edge="1" parent="1" source="dbt_group" target="bi_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_edge4" value="Serve / Query" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#475569;" vertex="1" connectable="0" parent="edge4">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Airflow DAG Flow Arrows -->
+        <mxCell id="af_edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#9333EA;" edge="1" parent="1" source="task1" target="task2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#9333EA;" edge="1" parent="1" source="task2" target="task3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#9333EA;" edge="1" parent="1" source="task3" target="task4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
